@@ -7,7 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "hashicorp/precise64"
   config.vm.network :private_network, ip: "10.10.10.20"
-  config.vm.network "forwarded_port", guest: 8001, host: 8000
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
   config.vm.synced_folder "./mke-bus/", "/mke-bus/", type: "nfs"
 
   config.vm.provision :shell, :inline => "sudo apt-get update"
