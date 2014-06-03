@@ -14,9 +14,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :inline => "sudo apt-get install -y python-software-properties"
   config.vm.provision :shell, :inline => "sudo add-apt-repository ppa:chris-lea/node.js"
   config.vm.provision :shell, :inline => "sudo apt-get update"
+  config.vm.provision :shell, :inline => "sudo apt-get install -y make"
+  config.vm.provision :shell, :inline => "sudo apt-get install -y build-essential"
   config.vm.provision :shell, :inline => "sudo apt-get install -y nodejs"
   config.vm.provision :shell, :inline => "sudo apt-get install -y postgresql"
   config.vm.provision :shell, :inline => "sudo apt-get install -y postgresql-contrib"
   config.vm.provision :shell, :inline => "sudo apt-get install -y pgadmin3"
+  config.vm.provision :shell, :inline => "sudo apt-get install -y libpq-dev"
 
 end
